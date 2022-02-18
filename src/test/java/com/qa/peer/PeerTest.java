@@ -9,10 +9,26 @@ public void test1() {
 	//Given
 	float myVal = 120f;
 	//When
-	float actual = revFact(float myVal);
+	String actual = PeerMain.revFact(myVal);
 	//then
-	float expected = 5.0f;
-	assertEquals(actual,expected,0.0001);
+	String expected = "5!";
+	assertEquals(actual,expected);
 	}
+@Test
+public void test150() {
+	float myVal = 150f;
+	String actual = PeerMain.revFact(myVal);
+	String expected = "NONE";
+	assertEquals(actual,expected);
+	
+}
+@Test
+public void testLessThanZero() {
+	float myVal = -12f;
+	String actual = PeerMain.revFact(myVal);
+	String expected = "NONE";
+	assertEquals(actual,expected);
+	
+}
 
 }
